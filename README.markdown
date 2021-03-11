@@ -31,15 +31,15 @@ Nick Coleman][3], adjusted slightly to work with Markdown footnotes.
 The script defines two mappings,
 
 ~~~
-<Leader>f    Insert new footnote
-<Leader>r    Return from footnote
+<LocalLeader>F    Insert new footnote
+<LocalLeader>R    Return from footnote
 ~~~
 
-To insert a footnote, type `<Leader>f`. A footnote mark will be inserted
+To insert a footnote, type `<LocalLeader>F`. A footnote mark will be inserted
 after the cursor. A matching footnote mark will be inserted at the end
 of the file. A new buffer will open in a split window at the bottom of
 your screen, ready to edit the new footnote. When you are done, type
-`<Leader>r` to close the split and return to the main text.
+`<LocalLeader>R` to close the split and return to the main text.
 
 ![Screenshot][5]
 
@@ -73,7 +73,7 @@ You can optionally disable line breaks before each footnote by setting `g:vimfoo
 `ReturnFromFootnote`
  :  closes the split window and returns to the text in proper place.
 
-These are mapped to `<Leader>f` and `<Leader>r` respectively.
+These are mapped to `<LocalLeader>F` and `<LocalLeader>R` respectively.
 
 `FootnoteNumber`
  :  Change the current footnote number (one obligatory argument)

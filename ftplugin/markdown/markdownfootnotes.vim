@@ -54,7 +54,7 @@
 " ReturnFromFootnote
 "  ~  closes the split window and returns to the text in proper place.
 "
-" These are mapped to <Leader>f and <Leader>r respectively.
+" These are mapped to <LocalLeader>F and <LocalLeader>R respectively.
 "
 " FootnoteNumber
 "  ~  Change the current footnote number (one obligatory argument)
@@ -105,18 +105,18 @@ if !exists("g:vimfootnotelinebreak")
 endif
 
 " Mappings
-if !hasmapto('<Plug>AddVimFootnote', 'i') && mapcheck('<Leader>f', 'i') is# ''
-	imap <buffer> <Leader>f <Plug>AddVimFootnote
+if !hasmapto('<Plug>AddVimFootnote', 'i') && mapcheck('<LocalLeader>F', 'i') is# ''
+	imap <buffer> <LocalLeader>F <Plug>AddVimFootnote
 endif
-if !hasmapto('<Plug>AddVimFootnote', 'n') && mapcheck('<Leader>f', 'n') is# ""
-    nmap <buffer> <Leader>f <Plug>AddVimFootnote
+if !hasmapto('<Plug>AddVimFootnote', 'n') && mapcheck('<LocalLeader>F', 'n') is# ""
+    nmap <buffer> <LocalLeader>F <Plug>AddVimFootnote
 endif
 
-if !hasmapto('<Plug>ReturnFromFootnote', 'i') && mapcheck('<Leader>r', 'i') is# ''
-    imap <buffer> <Leader>r <Plug>ReturnFromFootnote
+if !hasmapto('<Plug>ReturnFromFootnote', 'i') && mapcheck('<LocalLeader>R', 'i') is# ''
+    imap <buffer> <LocalLeader>R <Plug>ReturnFromFootnote
 endif
-if !hasmapto('<Plug>ReturnFromFootnote', 'n') && mapcheck('<Leader>r', 'n') is# ''
-    nmap <buffer> <Leader>r <Plug>ReturnFromFootnote
+if !hasmapto('<Plug>ReturnFromFootnote', 'n') && mapcheck('<LocalLeader>R', 'n') is# ''
+    nmap <buffer> <LocalLeader>R <Plug>ReturnFromFootnote
 endif
 
 nnoremap <buffer> <Plug>AddVimFootnote :<c-u>call markdownfootnotes#VimFootnotes('a')<CR>
